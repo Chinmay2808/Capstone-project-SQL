@@ -22,7 +22,8 @@ CREATE TABLE Students (
   major VARCHAR(50)
 );
 
-INSERT INTO Students (student_id, student_name, date_of_birth, email, major)
+INSERT INTO Students 
+	(student_id, student_name, date_of_birth, email, major)
 VALUES
   (1, 'John Doe', '1998-07-15', 'john.doe@example.com', 'Computer Science'),
   (2, 'Jane Smith', '1999-03-22', 'jane.smith@example.com', 'Mathematics'),
@@ -94,7 +95,7 @@ from students
 order by date_of_birth asc
 limit 1
 
--- Retrieve the oldest in the database.
+-- Retrieve the oldest student in the database.
 
 select student_name,date_of_birth
 from students
@@ -103,8 +104,10 @@ limit 1
 
 --  Add a new course to the Courses table.
 
-INSERT INTO Courses (course_id, course_name, credit_hours, instructor)
-VALUES (105, 'Algorithms', 3, 'Prof. Lee');
+INSERT INTO Courses
+	(course_id, course_name, credit_hours, instructor)
+VALUES 
+	(105, 'Algorithms', 3, 'Prof. Lee');
 
 -- Enroll a new student in the Students table.
 
